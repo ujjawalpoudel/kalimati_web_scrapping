@@ -1,17 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[49]:
-
-
-import numpy as np
 import requests
 import pandas as pd
 
 # api-endpoint
 URL = "http://kalimatimarket.gov.np/priceinfo/dlypricebulletin" # URL that hit API to get data as post method
 
-date = "12/01/2018" # for manula input date
+date = "12/01/2018" # for manual input date
 
 #pricetype
 pricetype = "W"    # W for  थोक   and R for खुद्रा
@@ -46,10 +39,3 @@ cols = cols[-1:] + cols[:-1]
 df = df[cols]
 
 df.to_csv("kalimati_scrapping.csv", index=False)
-
-
-# In[ ]:
-
-
-
-
